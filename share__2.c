@@ -63,23 +63,23 @@ char card[52][15] = {
 };
 
 int main() {
-    srand(time(NULL));
-    shuffle(52);
-    printf("몇 개의 카드를 뽑을지 입력하세요\n");
-    scanf("%d", &count);
-    for (int k = 0; k < count; k++) {
-        printf("%s\n", card[rand_number[k]]);
-    }
-    return 0;
+  srand(time(NULL));
+  shuffle(52);
+  printf("몇 개의 카드를 뽑을지 입력하세요\n");
+  scanf("%d", &count);
+  for (int k = 0; k < count; k++) {
+      printf("%s\n", card[rand_number[k]]);
+  }
+  return 0;
 }
 
 
 
 void shuffle(int a) {
-    for (int i = 0; i < a; i++) {
-        rand_number[i] = rand() %a + 1;
-        for (int j = 0; j < i; j++) {
-            if (rand_number[i] == rand_number[j]) i--;
-        }
+  for (int i = 0; i < a; i++) {
+    rand_number[i] = rand() %a + 1;
+    for (int j = 0; j < i; j++) {
+      if (rand_number[i] == rand_number[j]) i--;
     }
+  }
 }
