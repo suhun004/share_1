@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int shape, number;
+int shape, number;  //dasdada
 
 int main() {
   printf("스페이드는 1, 다이아몬드는 2, 하트는 3, 클로버는 4를 입력하세요\n");
@@ -12,7 +12,6 @@ int main() {
     case 2: printf("다이아몬드"); break;
     case 3: printf("하트"); break;
     case 4: printf("클로버"); break;
-     
   }
   switch(number) {
     case 11: printf("_JACK"); break;

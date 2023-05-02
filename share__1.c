@@ -8,12 +8,11 @@ int main()
   scanf("%d", &shape);
   printf("원하는 카드의 숫자를 입력하세요\n");
   scanf("%d", &number);
-  switch(shape) {
+  switch(shape){
     case 1: printf("스페이드"); break;
     case 2: printf("다이아몬드"); break;
     case 3: printf("하트"); break;
     case 4: printf("클로버"); break;
-     
   }
   switch(number) {
     case 11: printf("_JACK"); break;
