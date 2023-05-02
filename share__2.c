@@ -83,3 +83,7 @@ void shuffle(int a) {
     }
   }
 }
+
+void mind_f() {
+  printf("hello");
+}
