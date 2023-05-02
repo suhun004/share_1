@@ -4,6 +4,7 @@
 
 int rand_number[52];
 int count;
+//int main()
 
 void shuffle(int a); // a개의 수를 rand_number[]에 랜덤으로 중복없이 배열
 
