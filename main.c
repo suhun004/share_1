@@ -1,25 +1,52 @@
 #include <stdio.h>
 
-int shape, number;  //dasdada
+int card[4][13];
+int shape, number;
+int s, n;
 
-int main() {
-  printf("스페이드는 1, 다이아몬드는 2, 하트는 3, 클로버는 4를 입력하세요\n");
+int main()
+{
+  for (int i = 0; i < 4; i++) {
+    for (int j = 0; j < 13; j++) {
+      card[i][j] = i * 13 + j;
+    } 
+  }
+  printf("모양을 입력하세요(스페이드는 0, 다이아몬드는 1, 하트는 2, 클로버는 3)\n");
   scanf("%d", &shape);
-  printf("원하는 카드의 숫자를 입력하세요\n");
+  printf("카드의 숫자를 입력하세요\n");
   scanf("%d", &number);
-  switch(shape) {
-    case 1: printf("스페이드"); break;
-    case 2: printf("다이아몬드"); break;
-    case 3: printf("하트"); break;
-    case 4: printf("클로버"); break;
-  }
-  switch(number) {
-    case 11: printf("_JACK"); break;
-    case 12: printf("_QUEEN"); break;
-    case 13: printf("_KING"); break;
-    default: printf("%d", number);
-  }
-  printf("\n");
 
-  return 0;
+  s = (card[shape][number] + 1) / 13;
+  n = (card[shape][number] + 1) % 13 - 1;
+
+  switch(s) {
+    case 0:
+      printf("SPADE");
+      break;
+    case 1:
+      printf("DIAMOND");
+      break;
+    case 2:
+      printf("HEART");
+      break;
+    case 3:
+      printf("CLOVER");
+      break;
+  }
+  switch(n) {
+    case 1:
+      printf("_A");
+      break;
+    case 11:
+      printf("_j");
+      break;
+    case 12:
+      printf("_Q");
+      break;
+    case 13:
+      printf("_K");
+      break;
+    default:
+      printf("_%d", number);
+  }
 }
