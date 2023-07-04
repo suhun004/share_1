@@ -3,8 +3,8 @@
 using namespace std;
 
 int main() {
-  int i;
-  cin >> i;
+  int i = 0;
+  
   if (i == 0) {
     cout
     << "fail" << endl;
