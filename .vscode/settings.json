@@ -14,8 +14,5 @@
       "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
       "c": "cd $dir && gcc $fileName && $dira.out && rm a.out",
       "cpp": "cd $dir && g++ $fileName && $dira.out && rm a.out"
-  },
-  {
-    "giit": "git add -A && git commit -m \"asd\" && git push"
   }
 }
